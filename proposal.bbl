@@ -1,0 +1,20 @@
+\begin{thebibliography}{1}
+
+\bibitem{quine1985}
+W.V.~O. Quine.
+\newblock Events and reification.
+\newblock In {\em Action and Events: Perspectives on the philosophy of Donald
+  Davidson}, pages 162--171, 1985.
+
+\bibitem{revisit:16}
+Shyam Upadhyay, Nitish Gupta, Christos Christodoulopoulos, and Dan Roth.
+\newblock Revisiting the evaluation for cross document event coreference.
+\newblock In {\em COLING}, 2016.
+
+\bibitem{parma}
+Travis Wolfe, Mark Dredze, and Benjamin {Van Durme}.
+\newblock Predicate argument alignment using a global coherence model.
+\newblock In {\em Human Language Technologies: Conference of the North American
+  Chapter of the Association of Computational Linguistics, Proceedings}, 2015.
+
+\end{thebibliography}

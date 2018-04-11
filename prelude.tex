@@ -1,0 +1,147 @@
+% Redefines / Overrides the 'book' document class's default chapter heading formatting
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}% <----------------- Space from top of page to Chapter #
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+        \Huge\bfseries \@chapapp\space \thechapter% <-- Chapter #
+        \par\nobreak
+%        \vskip 20\p@% <-------------- Space between Chapter # and title
+    \fi
+    \interlinepenalty\@M
+    \huge \textit{#1}\par\nobreak% <------------------ Chapter title
+    \vskip 40\p@% <------------------ Space between chapter title and first paragraph
+  }}
+\makeatother
+
+
+\usepackage[margin=1in]{geometry}
+
+%%%% Includes for Minion %%%%%
+\usepackage[T1]{fontenc}
+%\usepackage[lf]{MinionPro}
+%\usepackage{MnSymbol}
+%\usepackage{MyriadPro}
+\usepackage{inconsolata} % nicer tt font
+
+\usepackage{lipsum} % Provides \lipsum command for generating random text
+\usepackage{setspace} % Provides \doublespacing command for double spacing
+\usepackage[utf8]{inputenc} % Generally useful UTF-8 characters
+\usepackage[tracking=true,activate={true,nocompatibility},final,kerning=true,spacing=true]{microtype}% Drastically improves character and line spacing and wrapping
+%\DisableLigatures{encoding = *, family = * } % This is useful for copy/paste with no ligatures
+\usepackage{xcolor} % For defining colors
+\usepackage{xspace} % The \xspace command conditionally adds spaces
+\usepackage{cite} % Numerically orders multiple citations and shrinks 2,3,4 into 2-4
+\usepackage{paralist} % Provides compactitem
+\usepackage{graphicx} % Fundamental package for \includegraphics
+\usepackage{caption} % Provides control over caption fonts and spacing
+\usepackage{subcaption} % For subfigure environment
+\usepackage{tabu} % Tabu is a decent package for more customizable tables
+\usepackage{makecell} % Helpful cell alignment package for tabu
+\usepackage[usestackEOL]{stackengine} % \shortstack command with configurable line spacing
+\usepackage{enumitem} % adds spacing options for itemize and enumerate
+\usepackage{pifont} % provides the circles with numbers inside them
+\usepackage{stmaryrd} % provides \shortrightarrow and other symbols
+\usepackage{relsize} % provides \relsize command to reduce text size relative to current size
+\usepackage{adjustbox} % for rotating text
+\usepackage{array} % provides bottom alignment in tables
+\usepackage{multirow} % span multiple rows in tables
+\usepackage{verbatimbox} % create verbatim boxes and use them in tables
+\usepackage{layouts} % lets you print various widths like \columnwidth
+\usepackage{bm} % Bold math 
+\usepackage{epigraph} % quotationas at the beggining of sections
+\usepackage[hang,flushmargin]{footmisc} % Footnote options such as spacing
+\usepackage{listings} % code listings
+\usepackage{ stmaryrd }
+\usepackage[titletoc,title]{appendix}
+\usepackage{amsthm} % Provides proof environment
+
+\usepackage[most]{tcolorbox} % provides good color boxes, \tcolorbox, which is better than xcolors colorbox
+\tcbuselibrary{breakable}
+
+% Tikz drawing package and a bunch of libraries that add functionality
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{bending}
+\usetikzlibrary{intersections}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{fadings}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{calc}
+\usetikzlibrary{fit}
+\usetikzlibrary{patterns}
+\usetikzlibrary{plotmarks}
+\usetikzlibrary{trees}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{positioning}
+\usepackage{algorithm2e}
+
+%%%% Includes for URLs and links between section in doc %%%%%
+\definecolor{figurecolor}{RGB}{22,90,220}
+\definecolor{citecolor}{RGB}{198,81,19}
+\usepackage{url}
+\usepackage[pdftex,colorlinks,pdfusetitle]{hyperref} % References are links; use \title and \author for pdf title and author
+\usepackage[hyperpageref]{backref}
+\usepackage[nameinlink,noabbrev]{cleveref} % Does the automatic referencing malarky (eg, "figure")
+\DeclareCaptionLabelSeparator{forcespace}{~} % Fixing a subcaption spacing bug
+\captionsetup[subfigure]{labelsep=forcespace}
+\captionsetup[figure]{labelfont={color=figurecolor}}
+\captionsetup[table]{labelfont={color=figurecolor}}
+%\renewcommand*{\backref}[1]{% for backref < 1.33 necessary
+%\renewcommand*{\backrefalt}[4]{\ifcase #1 \or (\S #2). \else (\S #2). \fi}
+\renewcommand*{\backrefalt}[4]{\ifcase #1 \or Page #2. \else Pages #2. \fi}
+\renewcommand\thefootnote{{\textcolor{citecolor}{\arabic{footnote}}}}
+\hypersetup{
+	colorlinks=true,
+	urlcolor=black,
+	linkcolor=figurecolor,
+	citecolor=citecolor,
+	pdfstartview=FitH %,
+}
+
+% automatically use the \S symbol for section autoref and eat the space
+\def\Snospace~{\S{}}
+\renewcommand*\sectionautorefname{\Snospace}
+\renewcommand*\subsectionautorefname{\Snospace}
+\renewcommand*\subsubsectionautorefname{\Snospace}
+\renewcommand*\chapterautorefname{Chapter}
+\newcommand{\lstnumberautorefname}{Line}
+\renewcommand*\algorithmautorefname{Algorithm}
+%%%%%%%%%%%%%%%%%%%%
+
+\frenchspacing % Single-spaced sentence spacing
+
+\usepackage{expl3}
+\ExplSyntaxOn
+\newcommand\latinabbrev[1]{
+  \peek_meaning:NTF . {% Same as \@ifnextchar
+    #1\@}%
+  { \peek_catcode:NTF a {% Check whether next char has same catcode as \'a, i.e., is a letter
+      #1.\@ }%
+    {#1.\@}}}
+\ExplSyntaxOff
+\def\etc{\latinabbrev{etc}}
+
+\newcommand{\eg}{\emph{e.g.}\xspace}
+\newcommand{\cf}{{cf.}\xspace}
+\newcommand{\ie}{\emph{i.e.}\xspace}
+\newcommand{\etal}{\emph{et al.}\xspace}
+
+\newcommand{\fakepara}[1]{\vspace{0.2em}\noindent\textbf{#1}\ \ }
+
+
+% Styles the \url command to have less spacing between characters
+% zi4 is the inconsolata font
+\SetTracking[spacing={-50*,0*,50*}]{encoding=T1, family=zi4}{-40}
+\renewcommand\UrlFont{\fontfamily{zi4}\lsstyle}
+%\Urlmuskip=-1mu\relax
+
+% Style smallcaps spacing
+\SetTracking{encoding={T1}, shape=sc}{-10}
+
+% Shorter underscore character
+\newcommand{\smallunderscore}{\rule{0.75ex}{.4pt}}

@@ -1,0 +1,41 @@
+\documentclass[10pt,oneside,openany]{brownthesis}
+
+% All package includes, setup, and general-purpose command definitions are contained in prelude.tex
+\input{prelude}
+\begin{document}
+\newcommand{\thesistitle}{Cross-Document Coreference Resolution for Entities and Events}
+\author{Chris Tanner}
+\title{\thesistitle\\~\\ Ph.D. Thesis Proposal}
+\date{May 16, 2018}
+
+\frontmatter % PROPOSAL
+
+\maketitle % PROPOSAL
+
+\mainmatter % PROPOSAL
+
+%\doublespacing
+
+\def\abstract#1{\gdef\d@abstract{#1}}
+\def\d@abstract{}
+\def\abstractpage{%
+  \thispagestyle{empty}
+  \noindent Abstract of ``\thesistitle''
+  \\
+  \input{abstract}
+  \vfill}
+\abstractpage
+{
+\singlespacing
+\hypersetup{linkcolor=black}
+\tableofcontents % PROPOSAL
+\doublespacing
+}
+%\listoffigures 
+%\listoftables
+\chapter{Introduction}
+\input{introduction}
+\backmatter % PROPOSAL
+\bibliographystyle{plain}
+\bibliography{proposal}
+\end{document}
