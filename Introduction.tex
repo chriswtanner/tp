@@ -1,7 +1,8 @@
 
 \textbf{Thesis Statement:} I propose a novel, neural-based mention-pair model for cross-document coreference resolution for events, which uses few lexical features and addresses shortcomings of traditional clustering approaches.  I will extend this work by jointly modelling both entities and events, while using structured information (e.g, parse trees).  Last, we aim to improve mention detection, whereby we develop an all-inclusive, end-to-end system which jointly resolves mention boundaries and coreference predictions.
 
-\vspace{20mm}
+\vspace{10mm}
+
 \section{Problem Statement}
 Coreference resolution is the task of identifying -- within a single text or across multiple documents -- which \textit{mentions} refer to the same underlying discourse object. 
 
@@ -14,7 +15,7 @@ An \textbf{entity} may be a person, location, time, or an organization.  The men
 \item Nominal mentions are represented by descriptive words, not composed entirely of a named entity or pronouns (e.g., The well-spoken citizen)
 \end{itemize}
 
-An \textbf{event} can generally be thought of as a specific action.  Quine \cite{quine1985} was the first to propose that an event refers to a physical object which is grounded to a specific time and location, and that two events are identical (i.e., co-referent) if they share the same spatiotemporal location.  This definition has become the general consensus within the community.  Specifically, two co-referent events must share the same \textit{properties} and \textit{participants}.  For example, in Figure \ref{fig:corpus}, sentences \#1 and \#2 contain the co-referent events (``placed'' and ``put''), yet neither are co-referent with events in sentence \#3.  Often times, the participants (arguments) may be referred to in different ways, implied, or missing altogether.
+An \textbf{event} can generally be thought of as a specific action.  Quine \cite{quine1985} was the first to propose that an event refers to a physical object which is grounded to a specific time and location, and that two events are identical (i.e., co-referent) if they share the same spatiotemporal location.  This definition has become the general consensus within the community\footnote{Hovy, et. al. \cite{Hovy2013EventsAN} provide an in-depth study of varying definitions.}.  Specifically, two co-referent events must share the same \textit{properties} and \textit{participants}.  For example, in Figure \ref{fig:corpus}, sentences \#1 and \#2 contain the co-referent events (``placed'' and ``put''), yet neither are co-referent with events in sentence \#3.  Often times, the participants (arguments) may be referred to in different ways, implied, or missing altogether.
 
 \begin{figure}[ht]
 \centering
@@ -32,11 +33,33 @@ Given a corpus of text documents, coreference resolution can be performed and ev
 \item \textbf{Cross-document} is when the entire corpus is available for linking; a mention is eligible to be co-referent with mentions in any other document, and the evaluation reflects the same.  As described in \cite{revisit:16}, cross-document evaluation is normally conducted by transforming the entire corpus into a ``meta-document."
 \end{itemize}
 
+\section{Motivation}
+Coreference Resolution remains a fundamental NLP task, as it is an essential component for any system that desires ``understanding'' textual data.  That is, in order to accurately model meaning, one must at the very least understand which items are concerning the same underlying objects.  As a simple example, if one performs a Web search for ``President Barack Obama'', some of the web page search results will contain sentences which only refer to Obama as ``he'', ``Obama'', or "The President," and correctly using this information is essential for returning relevant information to the user's query.  Further, coreference resolution is useful for information extraction \cite{Humphreys:1997:ECI:1598819.1598830}, question answering \cite{Narayanan:2004:QAB:1220355.1220455}, topic detection \cite{Allan:1998}, summarization \cite{Daniel:2003}, and more.
+
+
 \section{Coreference Systems}
+Coreference systems are predicated upon first having entity/event mentions identified, via a separate, distinct task called \textit{mention detection}.  Next, these identified mentions are used by coreference resolution models.
 
 \subsection{Mention Detection}
+This initial mention identification process is a separate line of research and has remained a fundamental task of NLP for several decades \cite{ner-sekine2007}.  When concerned with entities, research is commonly referred to as \textit{named entity recognition} or \textit{entity recognition}. When concerned with events, research is commonly referred to as \textit{event detection}.
+
+\subsubsection{Named Entity Recognition}
+The earliest work started in 1991 with the task of identifying company names \cite{Rau91}.  In 1996, the MUC-6 conference \cite{Grishman:1996:MUC:992628.992709} focused on Information Extraction tasks, which included coining the phrase "named entity" and drastically increasing attention to mention detection.  Early work demonstrated state-of-the-art performance with Hidden Markov Models (HMMs) \cite{Bikel97nymble:a} and Conditional Random Fields (CRFs) \cite{McCallum:2003:ERN:1119176.1119206}.  Presently, the best performing systems use similar models --- but from a deep learning framework --- which include Bi-directional LSTMs \cite{Hochreiter:1997:LSM:1246443.1246450, DBLP:journals/tacl/ChiuN16} and Convolution Neural Nets (CNNs) \cite{ma-hovy:2016:P16-1}.
+
+\subsubsection{Event Detection}
+Event Detection has received significantly less attention than Named Entity Recognition; however, the task of semantic role labelling (SRL) addresses a similar and more encompassing problem; SRL is a shallow semantic parsing task, whereby the goal is to identify each predicate in a sentence, along with its constituents and how they fill a semantic role --- specifically, to determine the role (e.g., Agent, Patient, Instrument, etc) and their adjuncts (Locative, Temporal, Manner, etc). \cite{Punyakanok:2008:ISP:1403157.1403162, Gildea:2002:ALS:643092.643093}.  In short, both SRL systems and Event Detection systems have often relied on using many lexical and syntactical features, including those from constituency parsers \cite{Toutanova:2005:JLI:1219840.1219913}, dependency parsers \cite{Johansson:2007:LSS:1621474.1621522}, etc.
+However, like entity recognition, recent state-of-the-art systems for Event Detection use Bi-directional LSTMs and CNNs \cite{Feng2016ALN}.
+
 \subsection{Coreference Resolution}
-\section{Motivation}
+As mentioned, coreference systems aim to create the correct clusters of mentions; however, due to the number of possible mention-to-cluster combinations, finding a globally-optimal assignment of clusters is NP-Hard and thus computationally intractable.  In attempt to avoid this, systems typically perform pairwise-mention predictions, then use those predictions to build clusters. The specific modelling strategies for such approximately fall into two categories: (1) mention-ranking / mention-pairs; and (2) entity-level / event-level.
+
+\textbf{Mention-ranking} models define a scoring function $f(m_i,m_j)$ which operates on a mention $m_j$ and possible antecedent $m_i$, where $m_i$ occurs earlier in the document and could be null (represented by $\epsilon$ and denoting that $m_j$ is non-anaphoric); e.g., Wiseman, et. al.'s \cite{DBLP:conf/acl/WisemanRSW15}.  These models aim to find the ideal $m_i$ antecedent for every $m_j$ mention.  After every mention has decided to link to $\epsilon$ or a previous mention, it is common practice to define each cluster simply by joining together all mentions are which connected by a single path.
+
+\textbf{Mention-pair} models score all pairs ($m_i,m_j)$, in contrast to mention-ranking models which aim to find the ideal $m_i$ antecedent for every $m_j$.  After every pair of mentions has been scored, it is common practice to cluster mentions in a best-first or easy-first manner (e.g. agglomerative clustering).  Because mention-pair models base their predictions on the information from just two mentions at a time, they are by definition less expressive than entity/event-level models.  Yet, their inference can be relatively simple and effective, allowing them to be fast and scalable.  Consequently, they have often been the approach used by many state-of-the-art systems \cite{Soon:2001:MLA:972597.972602,DBLP:conf/emnlp/DurrettK13}, including our work described in this proposal.
+
+\textbf{Entity/Event-level} models differ in that they focus on building a global representation of each underlying entity or event, the basis of which determines each mention's membership -- as opposed to operating on a mention-level basis \cite{DBLP:conf/naacl/WisemanRS16,clark2016improving}.  These models are attractive due to the intuitive nature in representing each entity with its own representation, challenges include (1) deciding how to represent each entity as it is being developed; (2) decided how many entities to model.
+
+
 
 
 

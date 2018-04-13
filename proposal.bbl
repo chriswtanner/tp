@@ -1,4 +1,122 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{Allan:1998}
+James Allan, Jaime Carbonell, George Doddington, Jonathan Yamron, Yiming Yang,
+  James~Allan Umass, Brian~Archibald Cmu, Doug~Beeferman Cmu, Adam~Berger Cmu,
+  Ralf~Brown Cmu, Ira~Carp Dragon, George~Doddington Darpa, Alex~Hauptmann Cmu,
+  John~Lafferty Cmu, Victor~Lavrenko Umass, Xin~Liu Cmu, Steve~Lowe Dragon,
+  Paul Van~Mulbregt Dragon, Ron~Papka Umass, Thomas~Pierce Cmu, Jay~Ponte
+  Umass, and Mike~Scudder Umass.
+\newblock Topic detection and tracking pilot study final report.
+\newblock In {\em In Proceedings of the DARPA Broadcast News Transcription and
+  Understanding Workshop}, pages 194--218, 1998.
+
+\bibitem{Bikel97nymble:a}
+Daniel~M. Bikel, Scott Miller, Richard Schwartz, and Ralph Weischedel.
+\newblock Nymble: a high-performance learning name-finder.
+\newblock In {\em In Proceedings of the Fifth Conference on Applied Natural
+  Language Processing}, pages 194--201, 1997.
+
+\bibitem{DBLP:journals/tacl/ChiuN16}
+Jason P.~C. Chiu and Eric Nichols.
+\newblock Named entity recognition with bidirectional lstm-cnns.
+\newblock {\em {TACL}}, 4:357--370, 2016.
+
+\bibitem{clark2016improving}
+Kevin Clark and Christopher~D. Manning.
+\newblock Improving coreference resolution by learning entity-level distributed
+  representations, 2016.
+\newblock cite arxiv:1606.01323Comment: Accepted for publication at the
+  Association for Computational Linguistics (ACL), 2016.
+
+\bibitem{Daniel:2003}
+Naomi Daniel, Dragomir Radev, and Timothy Allison.
+\newblock Sub-event based multi-document summarization.
+\newblock In {\em Proceedings of the HLT-NAACL 03 on Text Summarization
+  Workshop - Volume 5}, HLT-NAACL-DUC '03, pages 9--16, Stroudsburg, PA, USA,
+  2003. Association for Computational Linguistics.
+
+\bibitem{DBLP:conf/emnlp/DurrettK13}
+Greg Durrett and Dan Klein.
+\newblock Easy victories and uphill battles in coreference resolution.
+\newblock In {\em {EMNLP}}, pages 1971--1982. {ACL}, 2013.
+
+\bibitem{Feng2016ALN}
+Xiaocheng Feng, Lifu Huang, Duyu Tang, Heng Ji, Bing Qin, and Ting Liu.
+\newblock A language-independent neural network for event detection.
+\newblock In {\em ACL}, 2016.
+
+\bibitem{Gildea:2002:ALS:643092.643093}
+Daniel Gildea and Daniel Jurafsky.
+\newblock Automatic labeling of semantic roles.
+\newblock {\em Comput. Linguist.}, 28(3):245--288, September 2002.
+
+\bibitem{Grishman:1996:MUC:992628.992709}
+Ralph Grishman and Beth Sundheim.
+\newblock Message understanding conference-6: A brief history.
+\newblock In {\em Proceedings of the 16th Conference on Computational
+  Linguistics - Volume 1}, COLING '96, pages 466--471, Stroudsburg, PA, USA,
+  1996. Association for Computational Linguistics.
+
+\bibitem{Hochreiter:1997:LSM:1246443.1246450}
+Sepp Hochreiter and J\"{u}rgen Schmidhuber.
+\newblock Long short-term memory.
+\newblock {\em Neural Comput.}, 9(8):1735--1780, November 1997.
+
+\bibitem{Hovy2013EventsAN}
+Eduard~H. Hovy, Teruko Mitamura, Felisa Verdejo, Jun Araki, and Andrew Philpot.
+\newblock Events are not simple: Identity, non-identity, and quasi-identity.
+\newblock In {\em ACL}, 2013.
+
+\bibitem{Humphreys:1997:ECI:1598819.1598830}
+Kevin Humphreys, Robert Gaizauskas, and Saliha Azzam.
+\newblock Event coreference for information extraction.
+\newblock In {\em Proceedings of a Workshop on Operational Factors in
+  Practical, Robust Anaphora Resolution for Unrestricted Texts}, ANARESOLUTION
+  '97, pages 75--81, Stroudsburg, PA, USA, 1997. Association for Computational
+  Linguistics.
+
+\bibitem{Johansson:2007:LSS:1621474.1621522}
+Richard Johansson and Pierre Nugues.
+\newblock Lth: Semantic structure extraction using nonprojective dependency
+  trees.
+\newblock In {\em Proceedings of the 4th International Workshop on Semantic
+  Evaluations}, SemEval '07, pages 227--230, Stroudsburg, PA, USA, 2007.
+  Association for Computational Linguistics.
+
+\bibitem{ma-hovy:2016:P16-1}
+Xuezhe Ma and Eduard Hovy.
+\newblock End-to-end sequence labeling via bi-directional lstm-cnns-crf.
+\newblock In {\em Proceedings of the 54th Annual Meeting of the Association for
+  Computational Linguistics (Volume 1: Long Papers)}, pages 1064--1074, Berlin,
+  Germany, August 2016. Association for Computational Linguistics.
+
+\bibitem{McCallum:2003:ERN:1119176.1119206}
+Andrew McCallum and Wei Li.
+\newblock Early results for named entity recognition with conditional random
+  fields, feature induction and web-enhanced lexicons.
+\newblock In {\em Proceedings of the Seventh Conference on Natural Language
+  Learning at HLT-NAACL 2003 - Volume 4}, CONLL '03, pages 188--191,
+  Stroudsburg, PA, USA, 2003. Association for Computational Linguistics.
+
+\bibitem{ner-sekine2007}
+David Nadeau and Satoshi Sekine.
+\newblock A survey of named entity recognition and classification.
+\newblock {\em Linguisticae Investigationes}, 30(1):3--26, January 2007.
+\newblock Publisher: John Benjamins Publishing Company.
+
+\bibitem{Narayanan:2004:QAB:1220355.1220455}
+Srini Narayanan and Sanda Harabagiu.
+\newblock Question answering based on semantic structures.
+\newblock In {\em Proceedings of the 20th International Conference on
+  Computational Linguistics}, COLING '04, Stroudsburg, PA, USA, 2004.
+  Association for Computational Linguistics.
+
+\bibitem{Punyakanok:2008:ISP:1403157.1403162}
+Vasin Punyakanok, Dan Roth, and Wen-tau Yih.
+\newblock The importance of syntactic parsing and inference in semantic role
+  labeling.
+\newblock {\em Comput. Linguist.}, 34(2):257--287, June 2008.
 
 \bibitem{quine1985}
 W.V.~O. Quine.
@@ -6,10 +124,43 @@ W.V.~O. Quine.
 \newblock In {\em Action and Events: Perspectives on the philosophy of Donald
   Davidson}, pages 162--171, 1985.
 
+\bibitem{Rau91}
+L.~F. Rau.
+\newblock Extracting company names from text.
+\newblock In {\em Proc.\ of the Seventh Conference on Artificial Intelligence
+  Applications CAIA-91 (Volume II: Visuals)}, pages 189--194, Miami Beach, FL,
+  1991.
+
+\bibitem{Soon:2001:MLA:972597.972602}
+Wee~Meng Soon, Hwee~Tou Ng, and Daniel Chung~Yong Lim.
+\newblock A machine learning approach to coreference resolution of noun
+  phrases.
+\newblock {\em Comput. Linguist.}, 27(4):521--544, December 2001.
+
+\bibitem{Toutanova:2005:JLI:1219840.1219913}
+Kristina Toutanova, Aria Haghighi, and Christopher~D. Manning.
+\newblock Joint learning improves semantic role labeling.
+\newblock In {\em Proceedings of the 43rd Annual Meeting on Association for
+  Computational Linguistics}, ACL '05, pages 589--596, Stroudsburg, PA, USA,
+  2005. Association for Computational Linguistics.
+
 \bibitem{revisit:16}
 Shyam Upadhyay, Nitish Gupta, Christos Christodoulopoulos, and Dan Roth.
 \newblock Revisiting the evaluation for cross document event coreference.
 \newblock In {\em COLING}, 2016.
+
+\bibitem{DBLP:conf/naacl/WisemanRS16}
+Sam Wiseman, Alexander~M. Rush, and Stuart~M. Shieber.
+\newblock Learning global features for coreference resolution.
+\newblock In {\em {HLT-NAACL}}, pages 994--1004. The Association for
+  Computational Linguistics, 2016.
+
+\bibitem{DBLP:conf/acl/WisemanRSW15}
+Sam Wiseman, Alexander~M. Rush, Stuart~M. Shieber, and Jason Weston.
+\newblock Learning anaphoricity and antecedent ranking features for coreference
+  resolution.
+\newblock In {\em {ACL} {(1)}}, pages 1416--1426. The Association for Computer
+  Linguistics, 2015.
 
 \bibitem{parma}
 Travis Wolfe, Mark Dredze, and Benjamin {Van Durme}.
