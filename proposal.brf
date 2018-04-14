@@ -1,11 +1,11 @@
-\backcite {quine1985}{{3}{1.1}{section.1.1}}
-\backcite {Hovy2013EventsAN}{{3}{{\leavevmode {\color {citecolor}1}}}{Hfootnote.1}}
-\backcite {parma}{{4}{1.1}{figure.caption.2}}
-\backcite {revisit:16}{{4}{1.1}{figure.caption.2}}
-\backcite {Humphreys:1997:ECI:1598819.1598830}{{4}{1.2}{section.1.2}}
-\backcite {Narayanan:2004:QAB:1220355.1220455}{{4}{1.2}{section.1.2}}
-\backcite {Allan:1998}{{4}{1.2}{section.1.2}}
-\backcite {Daniel:2003}{{4}{1.2}{section.1.2}}
+\backcite {Humphreys:1997:ECI:1598819.1598830}{{3}{1.1}{section.1.1}}
+\backcite {Narayanan:2004:QAB:1220355.1220455}{{3}{1.1}{section.1.1}}
+\backcite {Allan:1998}{{3}{1.1}{section.1.1}}
+\backcite {Daniel:2003}{{3}{1.1}{section.1.1}}
+\backcite {quine1985}{{4}{1.2}{section.1.2}}
+\backcite {parma}{{4}{1.2}{figure.caption.2}}
+\backcite {revisit:16}{{4}{1.2}{figure.caption.2}}
+\backcite {Hovy2013EventsAN}{{4}{{\leavevmode {\color {citecolor}1}}}{Hfootnote.1}}
 \backcite {ner-sekine2007}{{5}{1.3.1}{subsection.1.3.1}}
 \backcite {Rau91}{{5}{1.3.1}{section*.3}}
 \backcite {Grishman:1996:MUC:992628.992709}{{5}{1.3.1}{section*.3}}
@@ -18,5 +18,16 @@
 \backcite {Johansson:2007:LSS:1621474.1621522}{{5}{1.3.1}{section*.4}}
 \backcite {Feng2016ALN}{{5}{1.3.1}{section*.4}}
 \backcite {DBLP:conf/acl/WisemanRSW15}{{5}{1.3.2}{subsection.1.3.2}}
-\backcite {Soon:2001:MLA:972597.972602,DBLP:conf/emnlp/DurrettK13}{{6}{1.3.2}{subsection.1.3.2}}
-\backcite {DBLP:conf/naacl/WisemanRS16,clark2016improving}{{6}{1.3.2}{subsection.1.3.2}}
+\backcite {Soon:2001:MLA:972597.972602, DBLP:conf/emnlp/DurrettK13}{{6}{1.3.2}{subsection.1.3.2}}
+\backcite {DBLP:conf/naacl/WisemanRS16, clark2016improving}{{6}{1.3.2}{subsection.1.3.2}}
+\backcite {Humphreys:1997:ECI:1598819.1598830,Bagga:1999:CEC:1608810.1608812}{{7}{2.1}{section.2.1}}
+\backcite {DBLP:conf/acl/WisemanRSW15,DBLP:conf/naacl/WisemanRS16}{{7}{2.2.1}{subsection.2.2.1}}
+\backcite {clark2016improving,DBLP:journals/corr/ClarkM16a}{{7}{2.2.1}{subsection.2.2.1}}
+\backcite {DBLP:conf/acl/WisemanRSW15}{{7}{2.2.1}{subsection.2.2.1}}
+\backcite {D17-1018}{{7}{2.2.1}{subsection.2.2.1}}
+\backcite {ECB+}{{8}{2.2.2}{subsection.2.2.2}}
+\backcite {journals/tacl/YangCF15}{{8}{2.2.2}{subsection.2.2.2}}
+\backcite {Choubey2017EventCR}{{8}{2.2.2}{subsection.2.2.2}}
+\backcite {journals/tacl/YangCF15}{{8}{2.2.2}{section*.5}}
+\backcite {Bengtson:2008:UVF:1613715.1613756}{{8}{2.2.2}{equation.2.2.1}}
+\backcite {Choubey2017EventCR}{{8}{2.2.2}{section*.6}}

@@ -11,6 +11,21 @@ James Allan, Jaime Carbonell, George Doddington, Jonathan Yamron, Yiming Yang,
 \newblock In {\em In Proceedings of the DARPA Broadcast News Transcription and
   Understanding Workshop}, pages 194--218, 1998.
 
+\bibitem{Bagga:1999:CEC:1608810.1608812}
+Amit Bagga and Breck Baldwin.
+\newblock Cross-document event coreference: Annotations, experiments, and
+  observations.
+\newblock In {\em Proceedings of the Workshop on Coreference and Its
+  Applications}, CorefApp '99, pages 1--8, Stroudsburg, PA, USA, 1999.
+  Association for Computational Linguistics.
+
+\bibitem{Bengtson:2008:UVF:1613715.1613756}
+Eric Bengtson and Dan Roth.
+\newblock Understanding the value of features for coreference resolution.
+\newblock In {\em Proceedings of the Conference on Empirical Methods in Natural
+  Language Processing}, EMNLP '08, pages 294--303, Stroudsburg, PA, USA, 2008.
+  Association for Computational Linguistics.
+
 \bibitem{Bikel97nymble:a}
 Daniel~M. Bikel, Scott Miller, Richard Schwartz, and Ralph Weischedel.
 \newblock Nymble: a high-performance learning name-finder.
@@ -22,12 +37,31 @@ Jason P.~C. Chiu and Eric Nichols.
 \newblock Named entity recognition with bidirectional lstm-cnns.
 \newblock {\em {TACL}}, 4:357--370, 2016.
 
+\bibitem{Choubey2017EventCR}
+Prafulla~Kumar Choubey and Ruihong Huang.
+\newblock Event coreference resolution by iteratively unfolding
+  inter-dependencies among events.
+\newblock In {\em EMNLP}, 2017.
+
+\bibitem{DBLP:journals/corr/ClarkM16a}
+Kevin Clark and Christopher~D. Manning.
+\newblock Deep reinforcement learning for mention-ranking coreference models.
+\newblock {\em CoRR}, abs/1609.08667, 2016.
+
 \bibitem{clark2016improving}
 Kevin Clark and Christopher~D. Manning.
 \newblock Improving coreference resolution by learning entity-level distributed
   representations, 2016.
 \newblock cite arxiv:1606.01323Comment: Accepted for publication at the
   Association for Computational Linguistics (ACL), 2016.
+
+\bibitem{ECB+}
+Agata Cybulska and Piek Vossen.
+\newblock Using a sledgehammer to crack a nut? lexical diversity and event
+  coreference resolution.
+\newblock In {\em Proceedings of the Ninth International Conference on Language
+  Resources and Evaluation (LREC-2014)}. European Language Resources
+  Association (ELRA), 2014.
 
 \bibitem{Daniel:2003}
 Naomi Daniel, Dragomir Radev, and Timothy Allison.
@@ -83,6 +117,13 @@ Richard Johansson and Pierre Nugues.
 \newblock In {\em Proceedings of the 4th International Workshop on Semantic
   Evaluations}, SemEval '07, pages 227--230, Stroudsburg, PA, USA, 2007.
   Association for Computational Linguistics.
+
+\bibitem{D17-1018}
+Kenton Lee, Luheng He, Mike Lewis, and Luke Zettlemoyer.
+\newblock End-to-end neural coreference resolution.
+\newblock In {\em Proceedings of the 2017 Conference on Empirical Methods in
+  Natural Language Processing}, pages 188--197. Association for Computational
+  Linguistics, 2017.
 
 \bibitem{ma-hovy:2016:P16-1}
 Xuezhe Ma and Eduard Hovy.
@@ -167,5 +208,11 @@ Travis Wolfe, Mark Dredze, and Benjamin {Van Durme}.
 \newblock Predicate argument alignment using a global coherence model.
 \newblock In {\em Human Language Technologies: Conference of the North American
   Chapter of the Association of Computational Linguistics, Proceedings}, 2015.
+
+\bibitem{journals/tacl/YangCF15}
+Bishan Yang, Claire Cardie, and Peter~I. Frazier.
+\newblock A hierarchical distance-dependent bayesian model for event
+  coreference resolution.
+\newblock {\em TACL}, 3:517--528, 2015.
 
 \end{thebibliography}

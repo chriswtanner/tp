@@ -1,0 +1,34 @@
+\section{Motivation}
+The seminal research on event coreference can be traced back to the DARPA-initiated MUC conferences, whereby the focus was on limited scenarios involving terrorist attacks, plane crashes, management succession, resignation, etc. \cite{Humphreys:1997:ECI:1598819.1598830,Bagga:1999:CEC:1608810.1608812}.
+
+In the present day, Deep Learning is revolutionizing NLP.  And, although coreference resolution has been researched for several decades, only recently have a few publications successfully applied deep learning to coreference -- almost all of which have been for \textit{entity} coreference.  We attribute this relatively small amount of deep learning models to the fact that coreference resolution is inherently a clustering task, which tends to be a non-obvious modality for deep learning.  Since our work so far (1) uses deep learning and (2) operates on events by using the ECB+ corpus, we organize the related research accordingly.
+
+% ====================
+\section{Deep Learning Approaches}
+% ====================
+To the best of our knowledge, there are six publications which apply deep learning to coreference resolution, five of which focus on entity coreference.
+
+\subsection{Coreference Resolution for Entities}
+Sam Wiseman, et. al. \cite{DBLP:conf/acl/WisemanRSW15,DBLP:conf/naacl/WisemanRS16} trained a mention-ranking model with a heuristic loss function that assigns different costs based on the types of errors made, and their latter work used mention-ranking predictions towards an entity-level model.
+
+Clark and Manning \cite{clark2016improving,DBLP:journals/corr/ClarkM16a} also built both a mention-ranking model and an entity-level model, the former of which was novel in using reinforcement learning to find the optimal loss values for the same four distinct error types defined in Wiseman's, et. al. \cite{DBLP:conf/acl/WisemanRSW15} work.
+
+Most recently, Lee, et. al. \cite{D17-1018} developed the first end-to-end coreference system which is only trained on gold clusters and uses few features (speaker information, genre, span distance, mention width) to do both mention detection and coreference resolution on those mentions.  Notably, this paper is the most similar to our proposed, desired goal as described in Section \ref{sec:proposed}.
+
+\subsection{Systems using ECB+ Corpus}
+For our research, we make use of the ECB+ corpus \cite{ECB+}, which we further describe in Section \ref{sec:corpus}.  This rich corpus provides annotations for both entities and events, yet most research chooses to focus on using \textit{either} events \textit{or} entities, not both.  To the best of our knowledge, there are only two papers which focus on the event mentions of ECB+: The Hierarchical Distance-dependent Chinese Restaurant Process (HDDCRP) model by Yang, et. al. \cite{journals/tacl/YangCF15} (not a Deep Learning approach) and Choubey's and Huang's Iteratively-Unfolding approach \cite{Choubey2017EventCR} (a Deep Learning approach).
+
+\subsubsection{HDDCRP Model}
+\label{sec:HDDCRP}
+% HDDCRP
+Yang, et. al's HDDCRP model \cite{journals/tacl/YangCF15} uses a clever mention-pair approach, whereby they first use logistic regression to train parameters $\theta$ for the similarity function in Equation \ref{eq:hddcrp}.  
+\begin{equation}
+\label{eq:hddcrp}
+f_{\theta}(x_i,x_j) \propto \textnormal{exp\{} \theta^T\psi(m_i,m_j)\textnormal{\}}
+\end{equation}
+Then, in a Chinese-restaurant-process fashion, they probabilistically link together mentions based purely on the scores provided by this similarity function.  That is, the value of $f(m_i,m_j)$ is directly correlated with the probability of $(m_i,m_j)$ being chosen as a linked pair.  Then, identical to Bengtson's and Roth's work \cite{Bengtson:2008:UVF:1613715.1613756}, the HDDCRP model forms clusters by tracing through all linked pairs. All mentions that are reachable by a continuous path become assigned the same cluster.  This hinges on the transitive property of coreference.  For example, if ${(m_1,m_3),(m_3,m_5)}$ and $(m_5,m_6)$ are each individually linked via the scoring function, then a cluster $C_i$ is formed, where $C_i = \{m_1,m_3,m_5,m_6\}$, even though $(m_1,m_5)$ or $(m_3,m_6)$ may have had very low similarity scores. We aim to improve this shortcoming, as detailed in Section \ref{sec:clustering}.
+
+\subsubsection{Neural Iteratively-Unfolding Model}
+\label{sec:Choubey}
+% Choubey
+Recently, Choubey and Huang \cite{Choubey2017EventCR} introduced the first neural model for event coreference.  Their system also fits into the mention-pair paradigm, whereby mentions are predicted by a feed-forward network.  The authors asserted that when using the ECB+ corpus, within-doc coreference did not benefit from using mention context, which is an important finding.  However, similar to the weakness of the HDDCRP model, they merge clusters which contain \textit{any} mention-pair whose predicted score is below a given threshold, independent of mentions' relation to the cluster at large.
