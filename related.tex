@@ -6,7 +6,7 @@ In the present day, Deep Learning is revolutionizing NLP.  And, although corefer
 % ====================
 \section{Deep Learning Approaches}
 % ====================
-To the best of our knowledge, there are six publications which apply deep learning to coreference resolution, five of which focus on entity coreference.
+To the best of our knowledge, there are six publications which apply deep learning to coreference resolution, five of which focus on entity coreference (the sixth is for events and is listed in Section \ref{sec:ecb+systems}).
 
 \subsection{Coreference Resolution for Entities}
 Sam Wiseman, et. al. \cite{DBLP:conf/acl/WisemanRSW15,DBLP:conf/naacl/WisemanRS16} trained a mention-ranking model with a heuristic loss function that assigns different costs based on the types of errors made, and their latter work used mention-ranking predictions towards an entity-level model.
@@ -16,7 +16,8 @@ Clark and Manning \cite{clark2016improving,DBLP:journals/corr/ClarkM16a} also bu
 Most recently, Lee, et. al. \cite{D17-1018} developed the first end-to-end coreference system which is only trained on gold clusters and uses few features (speaker information, genre, span distance, mention width) to do both mention detection and coreference resolution on those mentions.  Notably, this paper is the most similar to our proposed, desired goal as described in Section \ref{sec:proposed}.
 
 \subsection{Systems using ECB+ Corpus}
-For our research, we make use of the ECB+ corpus \cite{ECB+}, which we further describe in Section \ref{sec:corpus}.  This rich corpus provides annotations for both entities and events, yet most research chooses to focus on using \textit{either} events \textit{or} entities, not both.  To the best of our knowledge, there are only two papers which focus on the event mentions of ECB+: The Hierarchical Distance-dependent Chinese Restaurant Process (HDDCRP) model by Yang, et. al. \cite{journals/tacl/YangCF15} (not a Deep Learning approach) and Choubey's and Huang's Iteratively-Unfolding approach \cite{Choubey2017EventCR} (a Deep Learning approach).
+\label{sec:ecb+systems}
+For our research, we make use of the ECB+ corpus \cite{ECB+}, which we further describe in Section \ref{sec:corpus}.  This rich corpus provides annotations for both entities and events, yet most research focuses on using \textit{either} events \textit{or} entities, not both.  To the best of our knowledge, there are only two papers which focus on the event mentions of ECB+: The Hierarchical Distance-dependent Chinese Restaurant Process (HDDCRP) model by Yang, et. al. \cite{journals/tacl/YangCF15} (not a Deep Learning approach) and Choubey's and Huang's Iteratively-Unfolding approach \cite{Choubey2017EventCR} (a Deep Learning approach).
 
 \subsubsection{HDDCRP Model}
 \label{sec:HDDCRP}

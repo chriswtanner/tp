@@ -1,0 +1,74 @@
+\label{sec:proposed}
+\section{Joint Entity and Event Coreference}
+\section{Motivation}
+As shown in Figure [TODO: INSERT FIGURE], two sentences which contain co-referring entity mentions may also contain co-referring event mentions in a parallel fashion.  Table [TODO: CALCULATE STATS] demonstrates how often this occurs in the ECB+ corpus.  Since evidence of co-referring events increases the likelihood that the entities should also co-refer, we are motivated to model both entities and events, and to allow each model to influence the other.
+
+% TODO: insert figure
+\section{Related Work}
+There has been some research which demonstrates benefits of jointly resolving mentions across multiple entities [TODO: cite the papers (p490 of Jurafsky)].  However, there has not been much research that uses event information to resolve entities.  Haghighi and Klein \cite{Haghighi:2010:CRM:1857999.1858060} include a feature which concerns the governor of the head of nominal mentions (which could be events).  Rahman and Ng \cite{Rahman:2011:CRW:2002472.2002575} uses the semantic roles of entity mentions, along with the verb pairs of their predicates.  These models use event information to help inform entity coreference; yet, they do not perform event coreference or use resolved events to inform entity coreference.
+
+Choubey, et. al. \cite{Choubey2017EventCR} performs event coreference resolution via a feed-forward neural network.  Afterwards, in an ad hoc fashion, their system [TODO: describe their system]
+
+Most similar to our proposed work, Lee, et. al. \cite{Lee:2012:JEE:2390948.2391006} [TODO: describe their system and mention that they use their own corpus, EECB, not ECB+]
+
+%perform entity resolution via the Stanford Core NLP Toolkit.  Afterwards, all extracted event mentions are merged agnostically.  That is, the fact that they are events is ignored, and they could be merged with either pre-existing entity clusters or other event mentions.  Naturally, events merge with other events, since their properties are much different than entities.  So, even though their model allows for mixing entities and events, the confidence of one does not affect the confidence of the other.
+\section{Approach}
+We aim to first use strong entity coreference system.  We will evaluate both (1) our CCNN approach; and (2) Stanford Core NLP Toolkit's software on 3 different entity-labelled corpora:
+\begin{itemize}
+\item CoNLL-2012 Shared Task
+\item EECB (the corpus developed in \cite{Lee:2012:JEE:2390948.2391006})
+\item ECB+
+\end{itemize}
+
+\subsection{Semantic Trees}
+Hopefully our CCNN approach outperforms Stanford's.  If it is reasonably close, we will work on refining our model.  Alternatively, I am interested in exploring semantic Tree-Based approaches, such as Tree-LSTM, and modelling the likelihood that two mentions' co-referring based on the similarity of their semantic trees.  That is, one could learn common mappings that occur, such as the example in Figure \ref{fig:dep_mapping} [TODO: make a figure to show two dependency trees].  A simple baseline could be Tree-Edit distance.  More involved approaches include:
+\begin{itemize}
+\item seq2seq model (where the Tree is expanded to linear form)
+\item CNN model which learns patterns of sub-regions of trees
+\item ensemble of auto-encoders, each of which calculates the cost of mapping from one sub-region to another ($||f(Tree(m_{1})) - f(Tree(m_{2})))||$)
+\end{itemize}
+
+\subsection{Joint Work}
+We will use whichever model above that gives the best results on the 3 corpora.  Here, the emphasis of our research is not so much on developing the best possible entity coreference system, but to research the potential benefits from the joint modelling with events and to build each up in an iterative fashion.  Our goal is to use a Expectation-Maximization (EM)-style approach.  As a rough sketch (the math needs work and is not correct as is), we will aim for a back-and-forth like equations \ref{eq:em1} and \ref{eq:em2}.
+
+\begin{equation}
+\label{eq:em}
+\begin{split}
+P(m_{ent1}|m_{ent2}) = \frac{Q(m_{ent1}|m_{ent2}) + P(m_{event1}|m_{event2})}{\sum\limits_{m_{enti}}[Q(m_{enti}|m_{ent2})+ P(m_{eventi}|m_{event2})]} \\
+\text{where} \hspace{2mm}
+Q(m_{ent1}|m_{ent2}) = \frac{CCNN(m_{ent1}|m_{ent2})}{  \sum\limits_{m_{enti}} CCNN(m_{enti}|m_{ent2})  }
+\end{split}
+\end{equation}
+
+\begin{equation}
+\label{eq:em}
+\begin{split}
+P(m_{event1}|m_{event2}) = \frac{Q(m_{event1}|m_{event2}) + P(m_{ent1}|m_{ent2})}{\sum\limits_{m_{eventi}}[Q(m_{eventi}|m_{event2})+ P(m_{enti}|m_{ent2})]} \\
+\text{where} \hspace{2mm}
+Q(m_{event1}|m_{event2}) = \frac{CCNN(m_{event1}|m_{event2})}{  \sum\limits_{m_{eventi}} CCNN(m_{eventi}|m_{event2})  }
+\end{split}
+\end{equation}
+
+\section{Comprehensive Coreference: Mention Detection + Coreference}
+\section{Motivation}
+Currently, Mention Detection (e.g., Event Detection aka Named Entity Recognition) has always remained a disjoint line of research from coreference resolution, despite the fact that the input of coreference resolution has always been the output of mention detection.  Naturally, the performance of mention detection affects the eventual performance of coreference.  Thus, it seems likely that merging these two into a single model could improve results, especially if one considers that (1) the confidence of two mentions co-referring could help estimate if the mentions are even valid mentions (e.g., ``ran in the'' should have low probability of corefering with any other mention, signifying that it is probably not a valid mention), and; (2) the confidence of a given text being a mention could help determine if two candidate mentions co-ref (e.g, ``Barack Obama will'' having a mention detection score of 0.5 and ``Barack Obama'' having a score of 0.95).
+\section{Related Work}
+Recently published \cite{D17-1018} was the very first work which uses this idea.  In short, the authors present the first end-to-end coreference model, whereby they consider all possible mention spans, and prune them based on boundaries learned from context during training.  Notably, the model does not use third-party syntatic parse information.  Instead, the only specific features used are: speaker, genre, span distance, mention width.  Note, their work was for entity coreference and they used the CoNLL-2012 shared task, as opposed to our ECB+ corpus which does not have speaker or genre information.
+
+\section{Approach}
+A notable difference between our proposed work and the related work \cite{D17-1018} is that we:
+\begin{enumerate}
+\item Want to consider \textit{all} mention spans as candidates, and calculate coreference predictions with them, as opposed to pruning them before coreference.
+\item Predict the mention \textit{type} (e.g, action\_occurrence, person, organization, etc) along with each span, in attempt to help coreference
+\item Want to perform both entity and event resolution, as described in the previous section
+\item Want to perform cross-document coreference, not just within-doc
+\end{enumerate}
+
+The biggest challenge of these is arguably the $1^{st}$ item, as it is potentially prohibitely-expensive to compute all combination of candidate mention pairs, as this is $O(N^{4})$.  Current rough ideas for ways to approach this include:
+\begin{itemize}
+\item quick hashing techniques (e.g., MinHashing/LSH embeddings)
+\item heuristics (alpha-beta pruning) to stop exploring longer mention spans which have low scores from their constuite unigram, bi-gram candidate mentions
+\item try all mentions if possible (documents are short for the ECB+ corpus, so it might be possible, especially with parallel GPU jobs)
+\end{itemize}
+
+Specifically, I plan to evaluate our performance on (1) ECB+ corpus, as it has both entities and events labelled, and; (2) CoNLL-2012 for just entities, which will not leverage event coreference, as the corpus lacks this information, but it will give us a good comparison since this is the canonical corpus for entity coreference.

@@ -1,19 +1,5 @@
-% The dissertation must be accompanied by an abstract which will be published
-% in Dissertation Abstracts International. The abstract should, in a concise
-% manner, present the problem of the dissertation, discuss the materials and
-% procedure or methods used, and state the results or conclusions. Mathematical
-% formulas, diagrams, and other illustrative materials should be avoided. The
-% abstract should not be part of the dissertation itself nor should it be
-% included in the table of contents. The abstract should be presented in two
-% unnumbered loose copies. It should be headed as follows:
-% 
-% Abstract of (TITLE OF DISSERTATION), by (AUTHOR'S NAME), Ph.D., Brown
-% University, May (YEAR IN WHICH DEGREE IS TO BE AWARDED).
-% 
-% The abstract should be prepared carefully since it will be published without
-% editing or revision. The abstract should be double-spaced and may not exceed
-% 350 words (maximum 2,450 typewritten characters — including spaces and
-% punctuation — about 70 characters per line with a maximum of 35 lines). If
-% the 350-word limit is exceeded, University Microfilms will simply cut off the
-% abstract at this point.
-Abstract Here
+%Cross-Document Coreference Resolution for Entities and Events
+
+Coreference Resolution is a fundamental natural language processing (NLP) problem, as it attempts to resolve which underlying discourse objects refer to one another.  Further, it serves as an essential component of many other core NLP tasks, including information extraction, question-answering, document summarization, etc.  However, decades of research have primarily focused on resolving \textit{entities} (people, locations, organizations), with significantly less attention given to \textit{events} -- the actions performed.  Also, systems almost always use third-party software to first determine \textit{which} exact pieces of text (i.e., ``mentions'') to resolve, and these two lines of research have remained disjoint.
+
+This proposal outlines research which aims to improve coreference resolution by taking a comprehensive approach.  First, we develop a novel state-of-the-art event-based system which (1) uses significantly fewer lexical features than most existing systems; and (2) overcomes pitfalls from the commonly-used clustering approaches.  Next, we plan to jointly model both entities and events, while uniquely leveraging each model to benefit the other.  Last, we propose merging the mention detection and coreference lines of research, with the idea that accurately performing coreference on a given set of candidate mentions could improve mention detection, and vice versa.

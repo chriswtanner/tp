@@ -19,6 +19,14 @@ Amit Bagga and Breck Baldwin.
   Applications}, CorefApp '99, pages 1--8, Stroudsburg, PA, USA, 1999.
   Association for Computational Linguistics.
 
+\bibitem{Bejan:2010:UEC:1858681.1858824}
+Cosmin~Adrian Bejan and Sanda Harabagiu.
+\newblock Unsupervised event coreference resolution with rich linguistic
+  features.
+\newblock In {\em Proceedings of the 48th Annual Meeting of the Association for
+  Computational Linguistics}, ACL '10, pages 1412--1422, Stroudsburg, PA, USA,
+  2010. Association for Computational Linguistics.
+
 \bibitem{Bengtson:2008:UVF:1613715.1613756}
 Eric Bengtson and Dan Roth.
 \newblock Understanding the value of features for coreference resolution.
@@ -31,6 +39,14 @@ Daniel~M. Bikel, Scott Miller, Richard Schwartz, and Ralph Weischedel.
 \newblock Nymble: a high-performance learning name-finder.
 \newblock In {\em In Proceedings of the Fifth Conference on Applied Natural
   Language Processing}, pages 194--201, 1997.
+
+\bibitem{SiameseNet}
+Jane Bromley, Isabelle Guyon, Yann LeCun, Eduard S\"{a}ckinger, and Roopak
+  Shah.
+\newblock Signature verification using a "siamese" time delay neural network.
+\newblock In J.~D. Cowan, G.~Tesauro, and J.~Alspector, editors, {\em Advances
+  in Neural Information Processing Systems 6}, pages 737--744. Morgan-Kaufmann,
+  1994.
 
 \bibitem{DBLP:journals/tacl/ChiuN16}
 Jason P.~C. Chiu and Eric Nichols.
@@ -80,10 +96,21 @@ Xiaocheng Feng, Lifu Huang, Duyu Tang, Heng Ji, Bing Qin, and Ting Liu.
 \newblock A language-independent neural network for event detection.
 \newblock In {\em ACL}, 2016.
 
+\bibitem{DBLP:conf/acl/GehringAGD17}
+Jonas Gehring, Michael Auli, David Grangier, and Yann Dauphin.
+\newblock A convolutional encoder model for neural machine translation.
+\newblock In {\em {ACL} {(1)}}, pages 123--135. Association for Computational
+  Linguistics, 2017.
+
 \bibitem{Gildea:2002:ALS:643092.643093}
 Daniel Gildea and Daniel Jurafsky.
 \newblock Automatic labeling of semantic roles.
 \newblock {\em Comput. Linguist.}, 28(3):245--288, September 2002.
+
+\bibitem{Koch2015SiameseNN}
+Ruslan~Salakhutdinov Gregory~Koch, Richard~Zemel.
+\newblock Siamese neural networks for one-shot image recognition.
+\newblock In {\em ICML}, 2015.
 
 \bibitem{Grishman:1996:MUC:992628.992709}
 Ralph Grishman and Beth Sundheim.
@@ -91,6 +118,14 @@ Ralph Grishman and Beth Sundheim.
 \newblock In {\em Proceedings of the 16th Conference on Computational
   Linguistics - Volume 1}, COLING '96, pages 466--471, Stroudsburg, PA, USA,
   1996. Association for Computational Linguistics.
+
+\bibitem{Haghighi:2010:CRM:1857999.1858060}
+Aria Haghighi and Dan Klein.
+\newblock Coreference resolution in a modular, entity-centered model.
+\newblock In {\em Human Language Technologies: The 2010 Annual Conference of
+  the North American Chapter of the Association for Computational Linguistics},
+  HLT '10, pages 385--393, Stroudsburg, PA, USA, 2010. Association for
+  Computational Linguistics.
 
 \bibitem{Hochreiter:1997:LSM:1246443.1246450}
 Sepp Hochreiter and J\"{u}rgen Schmidhuber.
@@ -118,6 +153,19 @@ Richard Johansson and Pierre Nugues.
   Evaluations}, SemEval '07, pages 227--230, Stroudsburg, PA, USA, 2007.
   Association for Computational Linguistics.
 
+\bibitem{DBLP:conf/emnlp/Kim14}
+Yoon Kim.
+\newblock Convolutional neural networks for sentence classification.
+\newblock In {\em {EMNLP}}, pages 1746--1751. {ACL}, 2014.
+
+\bibitem{Lee:2012:JEE:2390948.2391006}
+Heeyoung Lee, Marta Recasens, Angel Chang, Mihai Surdeanu, and Dan Jurafsky.
+\newblock Joint entity and event coreference resolution across documents.
+\newblock In {\em Proceedings of the 2012 Joint Conference on Empirical Methods
+  in Natural Language Processing and Computational Natural Language Learning},
+  EMNLP-CoNLL '12, pages 489--500, Stroudsburg, PA, USA, 2012. Association for
+  Computational Linguistics.
+
 \bibitem{D17-1018}
 Kenton Lee, Luheng He, Mike Lewis, and Luke Zettlemoyer.
 \newblock End-to-end neural coreference resolution.
@@ -125,12 +173,27 @@ Kenton Lee, Luheng He, Mike Lewis, and Luke Zettlemoyer.
   Natural Language Processing}, pages 188--197. Association for Computational
   Linguistics, 2017.
 
+\bibitem{pmlr-v48-liud16}
+Weiyang Liu, Yandong Wen, Zhiding Yu, and Meng Yang.
+\newblock Large-margin softmax loss for convolutional neural networks.
+\newblock In Maria~Florina Balcan and Kilian~Q. Weinberger, editors, {\em
+  Proceedings of The 33rd International Conference on Machine Learning},
+  volume~48 of {\em Proceedings of Machine Learning Research}, pages 507--516,
+  New York, New York, USA, 20--22 Jun 2016. PMLR.
+
 \bibitem{ma-hovy:2016:P16-1}
 Xuezhe Ma and Eduard Hovy.
 \newblock End-to-end sequence labeling via bi-directional lstm-cnns-crf.
 \newblock In {\em Proceedings of the 54th Annual Meeting of the Association for
   Computational Linguistics (Volume 1: Long Papers)}, pages 1064--1074, Berlin,
   Germany, August 2016. Association for Computational Linguistics.
+
+\bibitem{manning-EtAl:2014:P14-5}
+Christopher~D. Manning, Mihai Surdeanu, John Bauer, Jenny Finkel, Steven~J.
+  Bethard, and David McClosky.
+\newblock The {Stanford} {CoreNLP} natural language processing toolkit.
+\newblock In {\em Association for Computational Linguistics (ACL) System
+  Demonstrations}, pages 55--60, 2014.
 
 \bibitem{McCallum:2003:ERN:1119176.1119206}
 Andrew McCallum and Wei Li.
@@ -153,6 +216,20 @@ Srini Narayanan and Sanda Harabagiu.
   Computational Linguistics}, COLING '04, Stroudsburg, PA, USA, 2004.
   Association for Computational Linguistics.
 
+\bibitem{pennington2014glove}
+Jeffrey Pennington, Richard Socher, and Christopher~D. Manning.
+\newblock Glove: Global vectors for word representation.
+\newblock In {\em Empirical Methods in Natural Language Processing (EMNLP)},
+  pages 1532--1543, 2014.
+
+\bibitem{Pradhan+etal:14a}
+Sameer Pradhan, Xiaoqiang Luo, Marta Recasens, Eduard Hovy, Vincent Ng, and
+  Michael Strube.
+\newblock Scoring coreference partitions of predicted mentions: A reference
+  implementation.
+\newblock In {\em Proceedings of the 52nd Annual Meeting of the Association for
+  Computational Linguistics (Volume 2: Short Papers)}, pages 30--35, 2014.
+
 \bibitem{Punyakanok:2008:ISP:1403157.1403162}
 Vasin Punyakanok, Dan Roth, and Wen-tau Yih.
 \newblock The importance of syntactic parsing and inference in semantic role
@@ -165,12 +242,25 @@ W.V.~O. Quine.
 \newblock In {\em Action and Events: Perspectives on the philosophy of Donald
   Davidson}, pages 162--171, 1985.
 
+\bibitem{Rahman:2011:CRW:2002472.2002575}
+Altaf Rahman and Vincent Ng.
+\newblock Coreference resolution with world knowledge.
+\newblock In {\em Proceedings of the 49th Annual Meeting of the Association for
+  Computational Linguistics: Human Language Technologies - Volume 1}, HLT '11,
+  pages 814--824, Stroudsburg, PA, USA, 2011. Association for Computational
+  Linguistics.
+
 \bibitem{Rau91}
 L.~F. Rau.
 \newblock Extracting company names from text.
 \newblock In {\em Proc.\ of the Seventh Conference on Artificial Intelligence
   Applications CAIA-91 (Volume II: Visuals)}, pages 189--194, Miami Beach, FL,
   1991.
+
+\bibitem{SchroffKP15}
+Florian Schroff, Dmitry Kalenichenko, and James Philbin.
+\newblock Facenet: A unified embedding for face recognition and clustering.
+\newblock In {\em CVPR}, pages 815--823. IEEE Computer Society, 2015.
 
 \bibitem{Soon:2001:MLA:972597.972602}
 Wee~Meng Soon, Hwee~Tou Ng, and Daniel Chung~Yong Lim.
@@ -214,5 +304,11 @@ Bishan Yang, Claire Cardie, and Peter~I. Frazier.
 \newblock A hierarchical distance-dependent bayesian model for event
   coreference resolution.
 \newblock {\em TACL}, 3:517--528, 2015.
+
+\bibitem{DBLP:journals/corr/YuV17}
+Xiang Yu and Ngoc~Thang Vu.
+\newblock Character composition model with convolutional neural networks for
+  dependency parsing on morphologically rich languages.
+\newblock {\em CoRR}, abs/1705.10814, 2017.
 
 \end{thebibliography}

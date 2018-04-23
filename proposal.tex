@@ -1,11 +1,19 @@
 \documentclass[10pt,oneside,openany]{brownthesis}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{algpseudocode}
+\usepackage{graphicx}
 
 % All package includes, setup, and general-purpose command definitions are contained in prelude.tex
 \input{prelude}
 \begin{document}
 \newcommand{\thesistitle}{Cross-Document Coreference Resolution for Entities and Events}
 \author{Chris Tanner}
-\title{\thesistitle\\~\\ Ph.D. Thesis Proposal}
+\title{\thesistitle\\~\\ Ph.D. Thesis Proposal \\ (draft as of April 19, 5pm)}
 \date{May 16, 2018}
 
 \frontmatter % PROPOSAL
@@ -42,17 +50,14 @@
 \chapter{Corpora}
 \input{Corpora}
 
-\chapter{CCNN}
-\input{CCNN}
+\chapter{Event Coreference Resolution}
+\input{EventCoref}
 
-\chapter{Entities}
-\input{Entities}
-
-\chapter{Proposed}
+\chapter{Proposed Work}
 \input{Proposed}
 
-\chapter{Conclusion}
-\input{Conclusion}
+%\chapter{Conclusion}
+%\input{Conclusion}
 \backmatter % PROPOSAL
 \bibliographystyle{plain}
 \bibliography{proposal}

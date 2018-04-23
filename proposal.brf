@@ -1,33 +1,54 @@
-\backcite {Humphreys:1997:ECI:1598819.1598830}{{3}{1.1}{section.1.1}}
-\backcite {Narayanan:2004:QAB:1220355.1220455}{{3}{1.1}{section.1.1}}
-\backcite {Allan:1998}{{3}{1.1}{section.1.1}}
-\backcite {Daniel:2003}{{3}{1.1}{section.1.1}}
-\backcite {quine1985}{{4}{1.2}{section.1.2}}
-\backcite {parma}{{4}{1.2}{figure.caption.2}}
-\backcite {revisit:16}{{4}{1.2}{figure.caption.2}}
-\backcite {Hovy2013EventsAN}{{4}{{\leavevmode {\color {citecolor}1}}}{Hfootnote.1}}
-\backcite {ner-sekine2007}{{5}{1.3.1}{subsection.1.3.1}}
-\backcite {Rau91}{{5}{1.3.1}{section*.3}}
-\backcite {Grishman:1996:MUC:992628.992709}{{5}{1.3.1}{section*.3}}
-\backcite {Bikel97nymble:a}{{5}{1.3.1}{section*.3}}
-\backcite {McCallum:2003:ERN:1119176.1119206}{{5}{1.3.1}{section*.3}}
-\backcite {Hochreiter:1997:LSM:1246443.1246450, DBLP:journals/tacl/ChiuN16}{{5}{1.3.1}{section*.3}}
-\backcite {ma-hovy:2016:P16-1}{{5}{1.3.1}{section*.3}}
-\backcite {Punyakanok:2008:ISP:1403157.1403162, Gildea:2002:ALS:643092.643093}{{5}{1.3.1}{section*.4}}
-\backcite {Toutanova:2005:JLI:1219840.1219913}{{5}{1.3.1}{section*.4}}
-\backcite {Johansson:2007:LSS:1621474.1621522}{{5}{1.3.1}{section*.4}}
-\backcite {Feng2016ALN}{{5}{1.3.1}{section*.4}}
-\backcite {DBLP:conf/acl/WisemanRSW15}{{5}{1.3.2}{subsection.1.3.2}}
-\backcite {Soon:2001:MLA:972597.972602, DBLP:conf/emnlp/DurrettK13}{{6}{1.3.2}{subsection.1.3.2}}
-\backcite {DBLP:conf/naacl/WisemanRS16, clark2016improving}{{6}{1.3.2}{subsection.1.3.2}}
-\backcite {Humphreys:1997:ECI:1598819.1598830,Bagga:1999:CEC:1608810.1608812}{{7}{2.1}{section.2.1}}
-\backcite {DBLP:conf/acl/WisemanRSW15,DBLP:conf/naacl/WisemanRS16}{{7}{2.2.1}{subsection.2.2.1}}
-\backcite {clark2016improving,DBLP:journals/corr/ClarkM16a}{{7}{2.2.1}{subsection.2.2.1}}
-\backcite {DBLP:conf/acl/WisemanRSW15}{{7}{2.2.1}{subsection.2.2.1}}
-\backcite {D17-1018}{{7}{2.2.1}{subsection.2.2.1}}
-\backcite {ECB+}{{8}{2.2.2}{subsection.2.2.2}}
-\backcite {journals/tacl/YangCF15}{{8}{2.2.2}{subsection.2.2.2}}
-\backcite {Choubey2017EventCR}{{8}{2.2.2}{subsection.2.2.2}}
-\backcite {journals/tacl/YangCF15}{{8}{2.2.2}{section*.5}}
-\backcite {Bengtson:2008:UVF:1613715.1613756}{{8}{2.2.2}{equation.2.2.1}}
-\backcite {Choubey2017EventCR}{{8}{2.2.2}{section*.6}}
+\backcite {Humphreys:1997:ECI:1598819.1598830}{{4}{1.1}{section.1.1}}
+\backcite {Narayanan:2004:QAB:1220355.1220455}{{4}{1.1}{section.1.1}}
+\backcite {Allan:1998}{{4}{1.1}{section.1.1}}
+\backcite {Daniel:2003}{{4}{1.1}{section.1.1}}
+\backcite {quine1985}{{5}{1.2}{section.1.2}}
+\backcite {parma}{{5}{1.2}{figure.caption.2}}
+\backcite {revisit:16}{{5}{1.2}{figure.caption.2}}
+\backcite {Hovy2013EventsAN}{{5}{{\leavevmode {\color {citecolor}1}}}{Hfootnote.1}}
+\backcite {ner-sekine2007}{{6}{1.3.1}{subsection.1.3.1}}
+\backcite {Rau91}{{6}{1.3.1}{section*.3}}
+\backcite {Grishman:1996:MUC:992628.992709}{{6}{1.3.1}{section*.3}}
+\backcite {Bikel97nymble:a}{{6}{1.3.1}{section*.3}}
+\backcite {McCallum:2003:ERN:1119176.1119206}{{6}{1.3.1}{section*.3}}
+\backcite {Hochreiter:1997:LSM:1246443.1246450, DBLP:journals/tacl/ChiuN16}{{6}{1.3.1}{section*.3}}
+\backcite {ma-hovy:2016:P16-1}{{6}{1.3.1}{section*.3}}
+\backcite {Punyakanok:2008:ISP:1403157.1403162, Gildea:2002:ALS:643092.643093}{{6}{1.3.1}{section*.4}}
+\backcite {Toutanova:2005:JLI:1219840.1219913}{{6}{1.3.1}{section*.4}}
+\backcite {Johansson:2007:LSS:1621474.1621522}{{6}{1.3.1}{section*.4}}
+\backcite {Feng2016ALN}{{6}{1.3.1}{section*.4}}
+\backcite {DBLP:conf/acl/WisemanRSW15}{{6}{1.3.2}{subsection.1.3.2}}
+\backcite {Soon:2001:MLA:972597.972602, DBLP:conf/emnlp/DurrettK13}{{7}{1.3.2}{subsection.1.3.2}}
+\backcite {DBLP:conf/naacl/WisemanRS16, clark2016improving}{{7}{1.3.2}{subsection.1.3.2}}
+\backcite {Humphreys:1997:ECI:1598819.1598830,Bagga:1999:CEC:1608810.1608812}{{8}{2.1}{section.2.1}}
+\backcite {DBLP:conf/acl/WisemanRSW15,DBLP:conf/naacl/WisemanRS16}{{8}{2.2.1}{subsection.2.2.1}}
+\backcite {clark2016improving,DBLP:journals/corr/ClarkM16a}{{8}{2.2.1}{subsection.2.2.1}}
+\backcite {DBLP:conf/acl/WisemanRSW15}{{8}{2.2.1}{subsection.2.2.1}}
+\backcite {D17-1018}{{8}{2.2.1}{subsection.2.2.1}}
+\backcite {ECB+}{{9}{2.2.2}{subsection.2.2.2}}
+\backcite {journals/tacl/YangCF15}{{9}{2.2.2}{subsection.2.2.2}}
+\backcite {Choubey2017EventCR}{{9}{2.2.2}{subsection.2.2.2}}
+\backcite {journals/tacl/YangCF15}{{9}{2.2.2}{section*.5}}
+\backcite {Bengtson:2008:UVF:1613715.1613756}{{9}{2.2.2}{equation.2.2.1}}
+\backcite {Choubey2017EventCR}{{9}{2.2.2}{section*.6}}
+\backcite {Bejan:2010:UEC:1858681.1858824}{{10}{3.1.1}{subsection.3.1.1}}
+\backcite {Lee:2012:JEE:2390948.2391006}{{10}{3.1.2}{subsection.3.1.2}}
+\backcite {journals/tacl/YangCF15}{{11}{3.1.3}{subsection.3.1.3}}
+\backcite {journals/tacl/YangCF15, Choubey2017EventCR}{{12}{4.1}{section.4.1}}
+\backcite {SiameseNet}{{13}{4.2}{section.4.2}}
+\backcite {Koch2015SiameseNN}{{13}{4.2}{Item.2}}
+\backcite {DBLP:conf/emnlp/Kim14,DBLP:conf/acl/GehringAGD17,DBLP:journals/corr/YuV17}{{13}{2}{Item.4}}
+\backcite {manning-EtAl:2014:P14-5}{{13}{4.2.1}{subsection.4.2.1}}
+\backcite {pennington2014glove}{{13}{4.2.1}{subsection.4.2.1}}
+\backcite {DBLP:conf/emnlp/Kim14}{{14}{4.2.2}{subsection.4.2.2}}
+\backcite {SchroffKP15,pmlr-v48-liud16}{{15}{4.2.3}{subsection.4.2.3}}
+\backcite {journals/tacl/YangCF15}{{15}{4.3.1}{subsection.4.3.1}}
+\backcite {Pradhan+etal:14a}{{17}{4.5}{section.4.5}}
+\backcite {Choubey2017EventCR}{{18}{4.5}{table.caption.10}}
+\backcite {Haghighi:2010:CRM:1857999.1858060}{{20}{5.3}{section.5.3}}
+\backcite {Rahman:2011:CRW:2002472.2002575}{{20}{5.3}{section.5.3}}
+\backcite {Choubey2017EventCR}{{20}{5.3}{section.5.3}}
+\backcite {Lee:2012:JEE:2390948.2391006}{{20}{5.3}{section.5.3}}
+\backcite {Lee:2012:JEE:2390948.2391006}{{20}{5.4}{section.5.4}}
+\backcite {D17-1018}{{22}{5.7}{section.5.7}}
+\backcite {D17-1018}{{22}{5.8}{section.5.8}}
