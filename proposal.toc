@@ -1,7 +1,7 @@
 \contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivation}{4}{section.1.1}
 \contentsline {section}{\numberline {1.2}Problem Statement}{4}{section.1.2}
-\contentsline {section}{\numberline {1.3}Coreference Systems}{5}{section.1.3}
+\contentsline {section}{\numberline {1.3}Coreference Systems}{6}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}Mention Detection}{6}{subsection.1.3.1}
 \contentsline {subsubsection}{Named Entity Recognition}{6}{section*.3}
 \contentsline {subsubsection}{Event Detection}{6}{section*.4}
