@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  11 MAY 2018 18:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  13 MAY 2018 20:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2141,23 +2141,23 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <20.74> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 44.
 (./introduction.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 15.
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 28.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 20.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 33.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [4
 
 ]
-<graphics/corpus.pdf, id=318, 2469.225pt x 777.04402pt>
+<graphics/corpus.pdf, id=321, 2469.225pt x 777.04402pt>
 File: graphics/corpus.pdf Graphic file (type pdf)
 
 <use graphics/corpus.pdf>
-Package pdftex.def Info: graphics/corpus.pdf used on input line 37.
+Package pdftex.def Info: graphics/corpus.pdf used on input line 42.
 (pdftex.def)             Requested size: 305.33789pt x 96.08687pt.
  [5 <./graphics/corpus.pdf>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 56.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 61.
  [6]) [7]
 Chapter 2.
 (./Related.tex [8
@@ -2171,7 +2171,7 @@ Chapter 4.
 (./EventCoref.tex [12
 
 ] [13]
-<graphics/architecture.pdf, id=497, 970.8019pt x 347.48923pt>
+<graphics/architecture.pdf, id=499, 970.8019pt x 347.48923pt>
 File: graphics/architecture.pdf Graphic file (type pdf)
 
 <use graphics/architecture.pdf>
@@ -2227,9 +2227,14 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 64.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 64.
 Package rerunfilecheck Info: File `proposal.out' has not changed.
 (rerunfilecheck)             Checksum: 0EA40FFC769E9FC281DD24726F2C7285;3086.
-Package rerunfilecheck Info: File `proposal.brf' has not changed.
-(rerunfilecheck)             Checksum: 10BF60B7FE453FA2CFBD8593A19020A7;3570.
 
+
+Package rerunfilecheck Warning: File `proposal.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `proposal.brf':
+(rerunfilecheck)             Before: D2154D28201D26806605BC1544B52502;3568
+(rerunfilecheck)             After:  10BF60B7FE453FA2CFBD8593A19020A7;3570.
 
 LaTeX Warning: There were undefined references.
 
@@ -2244,7 +2249,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  43474 strings out of 493014
  869567 string characters out of 6133351
- 1104719 words of memory out of 5000000
+ 1103719 words of memory out of 5000000
  45828 multiletter control sequences out of 15000+600000
  77995 words of font info for 260 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2269,7 +2274,7 @@ texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on proposal.pdf (27 pages, 1451685 bytes).
+Output written on proposal.pdf (27 pages, 1452765 bytes).
 PDF statistics:
  815 PDF objects out of 1000 (max. 8388607)
  696 compressed objects within 7 object streams
